@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <meta name="description" content="Official bio and links for Maanya Arora, Soulful Devotional & Folk Singer.">
     <style>
         :root {
             --primary: #ffffff;
@@ -429,22 +430,23 @@
         animate();
     </script>
     <script id="tfx12"> 
-        const text = "Black Lagoon Stickers"; 
+        const text = "Maanya  | Official Bio"; 
         let index = 0; 
         
         function typeTitle() { 
           if (index <= text.length) { 
-            document.title = text.substring(0, index); 
+            document.title = text.substring(0, index) + (index < text.length ? "|" : ""); 
             index++; 
-            setTimeout(typeTitle, 120); // speed (lower = faster) 
+            setTimeout(typeTitle, 150); 
           } else { 
-            // optional: restart effect 
-            index = 0; 
-            setTimeout(typeTitle, 1000); 
+            setTimeout(() => {
+              index = 0; 
+              typeTitle();
+            }, 3000); // Wait 3 seconds before restarting
           } 
         } 
         
-        typeTitle(); 
+        window.onload = typeTitle;
     </script>
 </body>
 </html>
