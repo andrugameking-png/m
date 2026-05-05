@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maanya | Official Bio</title>
+    <title>Maanya Arora | Official Bio</title>
+    <link rel="icon" type="image/gif" href="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnZyeHVlaXhiZXJicmoyNzdjNnRocXUwM2x5NnRhdTUxdDF5a3ducSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/kFHt17Bcpk6KDOSZSn/giphy.gif">
     <link rel="icon" type="image/gif" href="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXFqMHRtc2Jzd2t2cDMzN3EwaWV1NXRlNXdjcHNrNzJ6d2dhZHhnYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l4FGG5zOIrDjoZ1PG/giphy.gif">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-    <meta name="description" content="Official bio and links for Maanya Arora, Soulful Devotional & Folk Singer.">
     <style>
         :root {
             --primary: #ffffff;
@@ -305,8 +305,8 @@
                 <div class="avatar">M</div>
                 <div class="status-dot"></div>
             </div>
-            
-            <h1>Maanya</h1>
+
+            <h1>Maanya Arora</h1>
             <p class="tagline">Soulful Devotional & Folk Singer</p>
 
             <div class="links">
@@ -342,13 +342,13 @@
             document.getElementById('enter-screen').classList.add('fade-out');
             document.getElementById('main-container').classList.add('show');
             document.getElementById('music-indicator').style.opacity = "0.7";
-            
+
             // Try to trigger background audio using Spotify
             const spotifyUrl = "https://open.spotify.com/embed/track/47RTQoh3pzjhWLUMllNRRJ?utm_source=generator&autoplay=1";
             const bgAudioContainer = document.getElementById('bg-audio-container');
-            
+
             console.log("Starting background music...");
-            
+
             // Set Spotify as true background player
             bgAudioContainer.innerHTML = `<iframe 
                 width="100" 
@@ -362,7 +362,7 @@
         // Custom Cursor
         const cursor = document.querySelector('.cursor');
         const cursorDot = document.querySelector('.cursor-dot');
-        
+
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
@@ -430,23 +430,22 @@
         animate();
     </script>
     <script id="tfx12"> 
-        const text = "Maanya | Official Bio"; 
+        const text = "Black Lagoon Stickers"; 
         let index = 0; 
         
         function typeTitle() { 
           if (index <= text.length) { 
-            document.title = text.substring(0, index) + (index < text.length ? "|" : ""); 
+            document.title = text.substring(0, index); 
             index++; 
-            setTimeout(typeTitle, 150); 
+            setTimeout(typeTitle, 120); // speed (lower = faster) 
           } else { 
-            setTimeout(() => {
-              index = 0; 
-              typeTitle();
-            }, 3000); // Wait 3 seconds before restarting
+            // optional: restart effect 
+            index = 0; 
+            setTimeout(typeTitle, 1000); 
           } 
         } 
         
-        window.onload = typeTitle;
+        typeTitle(); 
     </script>
 </body>
 </html>
