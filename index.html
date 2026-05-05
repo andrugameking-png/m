@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maanya Arora | Official Bio</title>
-    <link rel="icon" type="image/gif" href="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnZyeHVlaXhiZXJicmoyNzdjNnRocXUwM2x5NnRhdTUxdDF5a3ducSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/kFHt17Bcpk6KDOSZSn/giphy.gif">
-    <link rel="icon" type="image/gif" href="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXFqMHRtc2Jzd2t2cDMzN3EwaWV1NXRlNXdjcHNrNzJ6d2dhZHhnYiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l4FGG5zOIrDjoZ1PG/giphy.gif">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
@@ -305,7 +303,7 @@
                 <div class="avatar">M</div>
                 <div class="status-dot"></div>
             </div>
-
+            
             <h1>Maanya Arora</h1>
             <p class="tagline">Soulful Devotional & Folk Singer</p>
 
@@ -326,11 +324,14 @@
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                 </a>
             </div>
+
+            <div class="spotify-wrap">
+                <iframe id="spotify-player" style="border-radius:12px" src="https://open.spotify.com/embed/track/47RTQoh3pzjhWLUMllNRRJ?utm_source=generator&autoplay=1" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
         </div>
-        <div id="music-indicator" style="text-align: center; margin-top: 20px; font-size: 0.8rem; color: var(--accent); opacity: 0; transition: opacity 1s ease;">
-            <span class="music-wave"></span>
-            Playing: Deewaana Deewaana
-        </div>
+        <p style="text-align: center; font-size: 0.7rem; color: var(--text-muted); margin-top: 15px; opacity: 0.5;">
+            Tip: If music doesn't play, click the play button on the Spotify widget.
+        </p>
     </div>
 
     <!-- Background Audio Helper -->
@@ -341,15 +342,14 @@
         function startApp() {
             document.getElementById('enter-screen').classList.add('fade-out');
             document.getElementById('main-container').classList.add('show');
-            document.getElementById('music-indicator').style.opacity = "0.7";
-
+            
             // Try to trigger background audio using Spotify
             const spotifyUrl = "https://open.spotify.com/embed/track/47RTQoh3pzjhWLUMllNRRJ?utm_source=generator&autoplay=1";
             const bgAudioContainer = document.getElementById('bg-audio-container');
-
+            
             console.log("Starting background music...");
-
-            // Set Spotify as true background player
+            
+            // Replace YouTube with Spotify for background
             bgAudioContainer.innerHTML = `<iframe 
                 width="100" 
                 height="100" 
@@ -362,7 +362,7 @@
         // Custom Cursor
         const cursor = document.querySelector('.cursor');
         const cursorDot = document.querySelector('.cursor-dot');
-
+        
         document.addEventListener('mousemove', (e) => {
             cursor.style.left = e.clientX + 'px';
             cursor.style.top = e.clientY + 'px';
@@ -428,24 +428,6 @@
         }
 
         animate();
-    </script>
-    <script id="tfx12"> 
-        const text = "Black Lagoon Stickers"; 
-        let index = 0; 
-        
-        function typeTitle() { 
-          if (index <= text.length) { 
-            document.title = text.substring(0, index); 
-            index++; 
-            setTimeout(typeTitle, 120); // speed (lower = faster) 
-          } else { 
-            // optional: restart effect 
-            index = 0; 
-            setTimeout(typeTitle, 1000); 
-          } 
-        } 
-        
-        typeTitle(); 
     </script>
 </body>
 </html>
